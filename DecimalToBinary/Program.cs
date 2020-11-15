@@ -13,20 +13,21 @@ namespace DecimalToBinary
             int numb;
             Console.Write("Enter an integer number : ");
             numb = int.Parse(Console.ReadLine());
+            int num = numb;
             int quot;
             string rem = "";
-            while (numb >= 1)
+            while (num >= 1)
             {
-                quot = numb / 2;
-                rem += (numb % 2).ToString();
-                numb = quot;
+                quot = num / 2;
+                rem += (num % 2).ToString();
+                num = quot;
             }
             string bin = "";
             for (int i = rem.Length - 1; i >= 0; i--)
             {
                 bin = bin + rem[i];
             }
-            Console.WriteLine("The binary format for number {0} is {1}", numb, bin);
+            Console.WriteLine($"The binary format for number {numb} is {bin}");
             Console.Read();
         }
     }
